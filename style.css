@@ -1,0 +1,250 @@
+body{
+font-family: Arial;
+text-align:center;
+margin:0;
+padding:20px;
+background-image:url("bg.jpg");
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
+color:white;
+}
+
+/* Dark overlay */
+.overlay{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.5);
+z-index:-1;
+}
+
+
+.final-confirm{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.8);
+display:none;
+justify-content:center;
+align-items:center;
+z-index:9999;
+}
+
+.confirm-box{
+background:white;
+padding:30px;
+border-radius:15px;
+text-align:center;
+}
+
+.btn-group button{
+margin:10px;
+padding:12px 20px;
+font-size:18px;
+cursor:pointer;
+border:none;
+border-radius:8px;
+}
+
+/* Intro text */
+.intro{
+font-size:16px;
+margin-bottom:20px;
+}
+
+/* Buttons */
+button{
+padding:12px 22px;
+margin:8px;
+border:2px solid rgba(255,255,255,0.7);
+border-radius:30px;
+background:#ff4d6d;
+color:white;
+font-size:15px;
+cursor:pointer;
+transition:0.3s;
+box-shadow:0 0 8px rgba(255,255,255,0.3);
+}
+
+button:hover{
+background:#ff2e63;
+transform:scale(1.05);
+box-shadow:0 0 15px rgba(255,255,255,0.6);
+}
+
+/* Popup */
+.popup{
+animation:popupFade 0.4s ease;
+display:none;
+position:fixed;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+background:white;
+padding:25px;
+border-radius:15px;
+box-shadow:0px 10px 25px rgba(0,0,0,0.4);
+width:85%;
+max-width:350px;
+text-align:left;
+color:#333;
+line-height:1.6;
+}
+
+@keyframes popupFade{
+from{opacity:0; transform:translate(-50%,-60%);}
+to{opacity:1; transform:translate(-50%,-50%);}
+}
+
+.popup button{
+margin-top:10px;
+}
+
+ul{
+padding-left:18px;
+}
+
+/* Video */
+video:not(.corner-teddy){
+width:90%;
+max-width:400px;
+margin-top:20px;
+border-radius:12px;
+}
+
+
+/* Floating Hearts */
+.hearts::before,
+.hearts::after{
+content:"❤️ ❤️ ❤️ ❤️ ❤️ ❤️ ❤️";
+position:fixed;
+left:0;
+width:100%;
+text-align:center;
+animation:floatHearts 20s linear infinite;
+opacity:0.5;
+font-size:20px;
+}
+
+@keyframes floatHearts{
+0%{transform:translateY(100vh);}
+100%{transform:translateY(-100vh);}
+}
+button{
+font-weight:600;
+}
+
+.intro{
+font-size:18px;
+margin-bottom:25px;
+font-weight:bold;
+color:white;
+text-shadow:0 0 8px rgba(255,255,255,0.4);
+}
+ 
+.corner-teddy.left{
+left:15px;
+transform:scaleX(-1)
+
+}
+
+.corner-teddy.right{
+right:15px;
+transform:scaleX(-1);
+}
+
+
+.corner-video{
+position:fixed;
+top:15px;
+left:15px;
+
+width:115px !important;
+height:115px !important;
+
+object-fit:contain;
+display:block;
+
+z-index:9999;
+pointer-events:none;
+
+border-radius:25px;
+
+animation:floatSoft 4s ease-in-out infinite;
+}
+
+.corner-video.right{
+left:auto;
+right:15px;
+transform:scaleX(-1);
+}
+
+
+.corner-video.right{
+left:auto;
+right:15px;
+transform:scaleX(-1);
+}
+
+
+
+
+.fade-in{
+animation:fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn{
+from{opacity:0;}
+to{opacity:1;}
+}
+
+@keyframes pulseHeart{
+0%{transform:scale(1);}
+50%{transform:scale(1.05);}
+100%{transform:scale(1);}
+}
+
+/* Small Teddy Videos (corners) */
+.corner-video{
+position:fixed;
+top:15px;        /* top corner */
+left:15px;
+
+width:130px;
+height:auto;
+
+border-radius:20px;
+object-fit:cover;
+
+z-index:5;
+pointer-events:none;
+
+animation:floatSoft 4s ease-in-out infinite;
+}
+
+/* Optional right teddy */
+.corner-video.right{
+left:auto;
+right:15px;
+transform:scaleX(-1);
+}
+
+@keyframes floatSoft{
+0%{transform:translateY(0px);}
+50%{transform:translateY(-8px);}
+100%{transform:translateY(0px);}
+}
+
+/* Normal Videos (center ones only) */
+video:not(.corner-video){
+width:90%;
+max-width:400px;
+margin-top:20px;
+border-radius:12px;
+}
+

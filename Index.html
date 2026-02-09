@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Wife ❤️</title>
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+<!-- <img src="Teddy3.jpeg" class="teddy-left" > -->
+
+<div class="overlay"></div>
+
+<h1>Hey Baby...❤️</h1>
+<p class="intro" id="typingText"></p>
+
+<div class="buttons">
+<button onclick="openStep(1)">❤️ How We Met</button>
+<button onclick="openStep(2)">😄 Funniest Moment</button>
+<button onclick="openStep(3)">💍 Why I Love You</button>
+<button onclick="openStep(4)">🤝 Thank You</button>
+<button onclick="openStep(5)">🧡 My Promises</button>
+<button onclick="showVideo()">🎁 Final Surprise</button>
+</div>
+<div id="popup" class="popup">
+<div id="popupText"></div>
+<button onclick="closePopup()">Close ❤️</button>
+</div>
+
+<div id="videoSection" style="display:none;">
+<h2>Happy Valentine’s Day ❤️</h2>
+<video id="lovevideo" controls>
+<source src="Mylove.mp4" type="video/mp4">
+
+</video>
+</div>
+
+
+<script src="script.js"></script>
+<div class="hearts"></div>
+<!-- FINAL CONFIRMATION POPUP -->
+<div id="finalConfirm" class="final-confirm">
+  <div class="confirm-box">
+<h2 style="color:#ff4d6d;margin-bottom:10px;">
+💍 Final Question ❤️
+</h2>
+
+<p style="font-size:18px;color:#333;margin-bottom:20px;">
+<b> Build Successful 💖
+Shall we continue this beautiful journey forever… together? 😍 </b>
+</p>
+
+<div class="btn-group">
+<button id="acceptBtn">Approve Forever(Yes) ❤️</button>
+<button id="declineBtn">Bug Found(NO) 😜</button>
+</div>
+
+</div>
+
+</div>
+
+
+<video src="Teddyleft.mp4" autoplay loop muted class="corner-video"></video>
+
+<video src="teddy-walk.mp4" autoplay loop muted class="corner-video right"></video>
+
+</body>
+</html>
